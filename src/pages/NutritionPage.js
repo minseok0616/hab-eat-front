@@ -418,7 +418,7 @@ const NutritionPage = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${localStorage.getItem('snsToken')}`, // 토큰 추가
+          Authorization: `Bearer ${localStorage.getItem('Back_Token')}`, // 토큰 추가
         },
       });
 
@@ -473,16 +473,16 @@ const NutritionPage = () => {
         ) : (
           <>
             <p>
-              섭취 칼로리: <b>1500</b> / 권장 칼로리: <b>{nutrients.kcal}</b> kcal
+              칼로리: <b>1500</b>/<b>{nutrients.kcal}</b> kcal
             </p>
             <p>
-              탄수화물: <b>{nutrients.carbohydrate}</b>g | 단백질: <b>{nutrients.protein}</b>g
+              탄수화물: <b>100</b>/<b>{nutrients.carbohydrate}</b>g | 단백질: <b>50</b>/<b>{nutrients.protein}</b>g
             </p>
             <p>
-              지방: <b>{nutrients.fat}</b>g | 나트륨: <b>{nutrients.natrium}</b>mg
+              지방: <b>20</b>/<b>{nutrients.fat}</b>g | 나트륨: <b>50</b>/<b>{nutrients.natrium}</b>mg
             </p>
             <p>
-              콜레스테롤: <b>{nutrients.cholesterol}</b>mg | 당: <b>{nutrients.sugar}</b>g
+              콜레스테롤: <b>50</b>/<b>{nutrients.cholesterol}</b>mg | 당: <b>50</b>/<b>{nutrients.sugar}</b>g
             </p>
           </>
         )}
